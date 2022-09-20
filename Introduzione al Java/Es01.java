@@ -1,4 +1,4 @@
-package it.giorgi.basetriangolo;
+package introduzioneAlJava;
 
 /**
  * Scrivere un programma che calcoli l’altezza di 
@@ -7,11 +7,11 @@ package it.giorgi.basetriangolo;
  * Il risultato dovrà essere fornito in 
  * output.
  */
-public class Es1 {
+public class Es01 {
 
     public static void main(String[] args) {
-        double A=17.2, b=3, h;
+        double A = 17.2, b = 3, h;
         h = 2 * A / b;
-        System.out.println("Il triangolo con area "+A+" e base "+b+" ha altezza "+h);
+        System.out.println("Il triangolo con area " + A + " e base " + b + " ha altezza " + h);
     }
 }
