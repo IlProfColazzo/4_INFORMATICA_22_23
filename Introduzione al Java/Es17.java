@@ -7,7 +7,6 @@ import java.util.Scanner;
  * tastiera e il tipo int per le variabili in cui memorizzare i risultati delle
  * divisioni.
  */
-
 public class Es17 {
 
     public static void main(String[] args) {

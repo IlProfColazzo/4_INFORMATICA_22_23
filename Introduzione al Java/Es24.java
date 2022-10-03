@@ -1,12 +1,12 @@
 package introduzioneAlJava;
 
+import java.util.Scanner;
+
 /**
  * Un supermercato applica uno sconto del 20% sull’importo che supera i 100€:
  * scrivi un programma che, leggendo il totale della spesa, calcola l’eventuale
  * importo scontato.
  */
-import java.util.Scanner;
-
 public class Es24 {
 
     public static void main(String[] args) {

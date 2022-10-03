@@ -6,7 +6,6 @@ import java.util.Scanner;
 * Calcolare e stampare a video la circonferenza e l’area di un cerchio
 * con raggio r fornito in input. 
 * Qual è la costante da definire?*/
-
 public class Es10 {
     
     public static void main(String[] args) {

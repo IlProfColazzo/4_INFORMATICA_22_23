@@ -1,5 +1,7 @@
 package introduzioneAlJava;
 
+import java.util.Scanner;
+
 /**
  * Una nuova compagnia telefonica ha promosso l’offerta “oltre 80”: alla cifra
  * fissa di 0.10 € (costo alla risposta) occorre aggiungere la cifra di 0.15€
@@ -8,8 +10,6 @@ package introduzioneAlJava;
  * della telefonata, visualizzare il costo totale della chiamata. Le tariffe
  * indicate nel testo sono delle costanti.
  */
-import java.util.Scanner;
-
 public class Es25 {
 
     public static void main(String[] args) {
