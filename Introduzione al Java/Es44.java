@@ -17,7 +17,7 @@ public class Es44 {
         nNumeri = tastiera.nextInt();
 
         int max = Integer.MIN_VALUE;
-        int min = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
         for (int i = 0; i < nNumeri; i++) {
             System.out.println("Insersci un valore: ");
             numero = tastiera.nextInt();
