@@ -1,42 +1,68 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package biblio;
 
-/**
- *
- * @author andre
- */
 public class Biblioteca {
-    
+
     private String nome;
-    private Piano[] piani;
+    private Piano piani[];
 
     public Biblioteca(String nome) {
         this.nome = nome;
-        this.piani = new Piano[3];
-        for (int i = 0; i < 3; i++) {
-            this.piani[i] = new Piano(i+1);
+        piani = new Piano[3];
+        for (int i = 0; i < piani.length; i++) {
+            piani[i] = new Piano(i + 1);
         }
-    }
-    
-    public boolean aggiungiLibro(int nPiano,String scaffale,int ripiano,Libro l){
-        if(nPiano-1<0 || nPiano-1>3){
-            return false;
-        }
-        return this.piani[nPiano-1].aggiungiLibro(scaffale, ripiano, l);
     }
 
-    public int cerca(String autore, String titolo) {
-        int ncopie = 0;
-        for (Piano piano : piani) {
-            ncopie += piano.cerca(autore,titolo);
+    public void aggiungi(Libro libro, int piano, String scaffale, int ripiano) {
+        this.piani[piano].aggiungi(libro, scaffale, ripiano);
+    }
+
+    public boolean contiene(int piano, String scaffale, int ripiano, Libro libro) {
+        return this.piani[piano].contiene(libro, scaffale, ripiano);
+    }
+
+    public String getLibri(int piano, String scaffale) {
+        return piani[piano].getLibri(scaffale);
+    }
+
+    public Libro cerca(String autore, String titolo) {
+        for (int i = 0; i < piani.length; ++i) {
+            Libro l = piani[i].cerca(autore, titolo);
+            if (l != null) {
+                return l;
+            }
         }
-        return ncopie;
+        return null;
     }
     
-    
-    
-    
+    public int cercaPiano(Libro libro)
+    {
+        for(int i=0;i<this.piani.length;i++)
+              if(this.piani[i].cercaPiano(libro))
+                      return i;
+        return -1;
+    }
+  
+  public String cercaScaffale(Libro libro)
+  {
+        for(int i=0;i<this.piani.length;i++)
+        {
+            String scaffale=this.piani[i].cercaScaffale(libro);
+            if(scaffale!=null)
+                    return scaffale;
+        }
+            return "Libro inesistente";
+  }
+  
+  public int cercaRipiano(Libro libro)
+  {
+        for(int i=0;i<this.piani.length;i++)
+        {
+                int k=this.piani[i].cercaRipiano(libro);
+                if(k>=0)
+                        return k;
+        }
+        return -1;
+  }
+
 }
